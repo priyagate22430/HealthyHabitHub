@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI Calculator | HealthyHabitHub</title>
+<link rel="stylesheet" href="bmi.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <div class="logo">HealthyHabitHub</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipe.html">Recipes</a></li>
+        <li><a href="#" class="active">BMI</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="btn-nav">Contact</a></li>
+    </ul>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Calculate Your BMI</h1>
+        <p>Know your body health and get Ayurvedic tips</p>
+    </div>
+</section>
+
+<!-- BMI Calculator Section -->
+<section class="bmi-calculator">
+    <div class="calculator-container">
+        <h2>Enter your details:</h2>
+        <form id="bmiForm">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" required>
+
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" required>
+
+            <button type="submit" class="btn">Calculate BMI</button>
+        </form>
+
+        <div id="result" class="result">
+            <h3>Your BMI: <span id="bmiValue"></span></h3>
+            <p id="bmiCategory"></p>
+            <h4>Ayurvedic Remedies:</h4>
+            <ul id="ayurvedaTips"></ul>
+        </div>
+    </div>
+</section>
+
+<script src="bmi.js"></script>
+</body>
+</html>   

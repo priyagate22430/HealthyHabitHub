@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Healthy vs Junk Food - HealthyHabitHub</title>
+
+    <link rel="stylesheet" href="healthy-junk.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">HealthyHabitHub</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipe.html"class="btn-nav">Recipes</a></li>
+            <li><a href="bmi.html"class="btn-nav">BMI</a></li>
+            <li><a href="healthy-junk.html" class="btn-nav">Healthy vs Junk</a></li>
+            <li><a href="about.html"class="btn-nav">About</a></li>
+          
+        </ul>
+    </nav>
+
+
+    <!-- Header -->
+    <section class="hero">
+        <h1>🥗 Healthy vs 🍔 Junk Food</h1>
+
+        <p>
+            Learn the difference between healthy and junk foods
+            and make better food choices every day.
+        </p>
+    </section>
+
+
+    <!-- Search and Filter -->
+    <section class="controls">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Search food..."
+        >
+
+        <button class="filter-btn active" onclick="filterFood('all')">
+            All
+        </button>
+
+        <button class="filter-btn" onclick="filterFood('healthy')">
+            🥗 Healthy
+        </button>
+
+        <button class="filter-btn" onclick="filterFood('junk')">
+            🍔 Junk
+        </button>
+
+    </section>
+
+
+    <!-- Food Cards -->
+    <section class="food-container" id="foodContainer">
+
+        <!-- Apple -->
+        <div class="food-card healthy" data-name="apple">
+
+            <div class="food-icon">🍎</div>
+
+            <h2>Apple</h2>
+
+            <span class="badge healthy-badge">
+                Healthy
+            </span>
+
+            <p>
+                Rich in fiber, vitamins and antioxidants.
+            </p>
+
+            <div class="nutrition">
+                <p><strong>Calories:</strong> 52 kcal</p>
+                <p><strong>Fiber:</strong> 2.4 g</p>
+                <p><strong>Sugar:</strong> 10 g</p>
+            </div>
+
+            <button onclick="showInfo('Apple', 'A nutritious fruit rich in fiber and antioxidants.')">
+                View Benefits
+            </button>
+
+        </div>
+
+
+        <!-- Salad -->
+        <div class="food-card healthy" data-name="salad">
+
+            <div class="food-icon">🥗</div>
+
+            <h2>Vegetable Salad</h2>
+
+            <span class="badge healthy-badge">
+                Healthy
+            </span>
+
+            <p>
+                A nutritious combination of fresh vegetables.
+            </p>
+
+            <div class="nutrition">
+                <p><strong>Calories:</strong> 80 kcal</p>
+                <p><strong>Fiber:</strong> 4 g</p>
+                <p><strong>Protein:</strong> 3 g</p>
+            </div>
+
+            <button onclick="showInfo('Vegetable Salad', 'Provides vitamins, minerals and dietary fiber.')">
+                View Benefits
+            </button>
+
+        </div>
+
+
+        <!-- Oats -->
+        <div class="food-card healthy" data-name="oats">
+
+            <div class="food-icon">🥣</div>
+
+            <h2>Oats</h2>
+
+            <span class="badge healthy-badge">
+                Healthy
+            </span>
+
+            <p>
+                Whole grain food containing fiber and nutrients.
+            </p>
+
+            <div class="nutrition">
+                <p><strong>Calories:</strong> 389 kcal / 100g</p>
+                <p><strong>Fiber:</strong> 10.6 g</p>
+                <p><strong>Protein:</strong> 16.9 g</p>
+            </div>
+
+            <button onclick="showInfo('Oats', 'Oats are a good source of fiber and can help keep you full.')">
+                View Benefits
+            </button>
+
+        </div>
+
+
+        <!-- Burger -->
+        <div class="food-card junk" data-name="burger">
+
+            <div class="food-icon">🍔</div>
+
+            <h2>Burger</h2>
+
+            <span class="badge junk-badge">
+                Junk
+            </span>
+
+            <p>
+                Often high in calories, sodium and saturated fat.
+            </p>
+
+            <div class="nutrition">
+                <p><strong>Calories:</strong> ~300-600 kcal</p>
+                <p><strong>Fat:</strong> High</p>
+                <p><strong>Sodium:</strong> High</p>
+            </div>
+
+            <button onclick="showInfo('Burger', 'Frequent consumption of highly processed burgers can increase calorie and sodium intake.')">
+                Health Information
+            </button>
+
+        </div>
+
+
+        <!-- Pizza -->
+        <div class="food-card junk" data-name="pizza">
+
+            <div class="food-icon">🍕</div>
+
+            <h2>Pizza</h2>
+
+            <span class="badge junk-badge">
+                Junk
+            </span>
+
+            <p>
+                Can be high in refined carbohydrates, sodium and fat.
+            </p>
+
+            <div class="nutrition">
+                <p><strong>Calories:</strong> ~250-350 kcal / slice</p>
+                <p><strong>Fat:</strong> Moderate-High</p>
+                <p><strong>Sodium:</strong> High</p>
+            </div>
+
+            <button onclick="showInfo('Pizza', 'Choose vegetable toppings and moderate portions when eating pizza.')">
+                Health Information
+            </button>
+
+        </div>
+
+
+        <!-- French Fries -->
+        <div class="food-card junk" data-name="fries">
+
+            <div class="food-icon">🍟</div>
+
+            <h2>French Fries</h2>
+
+            <span class="badge junk-badge">
+                Junk
+            </span>
+
+            <p>
+                Fried food that can be high in calories and fat.
+            </p>
+
+            <div class="nutrition">
+                <p><strong>Calories:</strong> ~312 kcal / 100g</p>
+                <p><strong>Fat:</strong> ~15 g</p>
+                <p><strong>Fiber:</strong> ~3.8 g</p>
+            </div>
+
+            <button onclick="showInfo('French Fries', 'Limit frequent consumption of deep-fried foods and choose baked alternatives.')">
+                Health Information
+            </button>
+
+        </div>
+
+
+        <!-- Soft Drink -->
+        <div class="food-card junk" data-name="soft drink">
+
+            <div class="food-icon">🥤</div>
+
+            <h2>Soft Drink</h2>
+
+            <span class="badge junk-badge">
+                Junk
+            </span>
+
+            <p>
+                Sugary drinks can add a large amount of added sugar.
+            </p>
+
+            <div class="nutrition">
+                <p><strong>Calories:</strong> ~42 kcal / 100ml</p>
+                <p><strong>Sugar:</strong> ~10.6 g / 100ml</p>
+                <p><strong>Fiber:</strong> 0 g</p>
+            </div>
+
+            <button onclick="showInfo('Soft Drink', 'Water and unsweetened beverages are better everyday choices than sugary drinks.')">
+                Health Information
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Comparison -->
+    <section class="comparison">
+
+        <h2>🥗 Healthy Food vs 🍔 Junk Food</h2>
+
+        <table>
+
+            <tr>
+                <th>Healthy Food</th>
+                <th>Junk Food</th>
+            </tr>
+
+            <tr>
+                <td>Usually nutrient-rich</td>
+                <td>Often nutrient-poor</td>
+            </tr>
+
+            <tr>
+                <td>Usually contains more fiber</td>
+                <td>Often contains less fiber</td>
+            </tr>
+
+            <tr>
+                <td>Less processed options</td>
+                <td>Often highly processed</td>
+            </tr>
+
+            <tr>
+                <td>Supports a balanced diet</td>
+                <td>Best consumed occasionally</td>
+            </tr>
+
+            <tr>
+                <td>Fruits, vegetables, whole grains</td>
+                <td>Fries, sugary drinks, processed snacks</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <!-- Health Tips -->
+    <section class="tips">
+
+        <h2>💡 Healthy Eating Tips</h2>
+
+        <div class="tip-box">
+
+            <p>🥦 Add more vegetables to your meals.</p>
+
+            <p>🍎 Choose whole fruits instead of sugary snacks.</p>
+
+            <p>💧 Drink enough water throughout the day.</p>
+
+            <p>🥜 Include nutritious protein and healthy-fat sources.</p>
+
+            <p>🍔 Keep highly processed foods as occasional choices.</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Popup -->
+    <div id="infoModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal()">
+                &times;
+            </span>
+
+            <h2 id="modalTitle"></h2>
+
+            <p id="modalText"></p>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            © 2026 HealthyHabitHub | Eat Healthy, Stay Healthy ❤️
+        </p>
+
+    </footer>
+
+
+    <script src="healthy-junk.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthy Recipes | HealthyHabitHub</title>
+
+<link rel="stylesheet" href="recipe.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <div class="logo">HealthyHabitHub</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#" class="active">Recipes</a></li>
+        <li><a href="bmi.html">BMI</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="btn-nav">Contact</a></li>
+    </ul>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Curated Healthy Recipes</h1>
+        <p>Experience nutrition with elegance</p>
+    </div>
+</section>
+
+<!-- Recipes Grid -->
+<section class="recipes">
+
+    <!-- Card 1 -->
+     <div class="card">
+        <img src="image/fruit_salad.jpg" alt="Fruit Salad">
+        <div class="card-content">
+            <h3> Fruit Salad</h3>
+            <p class="calories">180 kcal</p>
+            <a class="btn" onclick="openModal(1)">View Recipe</a>
+        </div>
+    </div>
+
+
+    <!-- Card 2 -->
+    <div class="card">
+        <img src="image/grilled_vegetable.jpg" alt="Grilled Veggies">
+        <div class="card-content">
+            <h3> Grilled Veggies</h3>
+            <p class="calories">150 kcal</p>
+            <a class="btn" onclick="openModal(2)">View Recipe</a>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+        <img src="image/chiapudding.jpg" alt="Chia Pudding">
+        <div class="card-content">
+            <h3> Chia Pudding</h3>
+            <p class="calories">250 kcal</p>
+            <a class="btn" onclick="openModal(3)">View Recipe</a>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+        <img src="image/oatmeal.jpg" alt="Oatmeal Bowl">
+        <div class="card-content">
+            <h3> Oatmeal Bowl</h3>
+            <p class="calories">300 kcal</p>
+            <a class="btn" onclick="openModal(4)">View Recipe</a>
+        </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+        <img src="image/grilledsalmon.jpg" alt="Grilled Salmon">
+        <div class="card-content">
+            <h3> Grilled Salmon</h3>
+            <p class="calories">400 kcal</p>
+            <a class="btn" onclick="openModal(5)">View Recipe</a>
+        </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+        <img src="image/quinoabowl.jpg" alt="Quinoa Bowl">
+        <div class="card-content">
+            <h3> Quinoa Bowl</h3>
+            <p class="calories">250 kcal</p>
+            <a class="btn" onclick="openModal(6)">View Recipe</a>
+        </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="card">
+        <img src="image/avocado salad.jpg" alt="Avocado Salad">
+        <div class="card-content">
+            <h3> Avocado Salad</h3>
+            <p class="calories">320 kcal</p>
+            <a class="btn" onclick="openModal(7)">View Recipe</a>
+        </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card">
+        <img src="image/smoothie bowl.jpg" alt="Smoothie Bowl">
+        <div class="card-content">
+            <h3> Smoothie Bowl</h3>
+            <p class="calories">280 kcal</p>
+            <a class="btn" onclick="openModal(8)">View Recipe</a>
+        </div>
+    </div>
+
+</section>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <h4>Ingredients:</h4>
+        <ul id="modal-ingredients"></ul>
+        <h4>Recipe:</h4>
+        <p id="modal-recipe"></p>
+    </div>
+</div>
+
+<script src="recipe.js"></script>
+</body>
+</html>       
