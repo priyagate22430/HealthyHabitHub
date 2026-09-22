@@ -49,7 +49,7 @@ body {
 /* Hero */
 .hero {
     height: 40vh;
-    background: url('image/bmi.jpg') no-repeat center/cover;
+    background: url('../image/bmi.jpg') no-repeat center/cover;
     position: relative;
 }
 

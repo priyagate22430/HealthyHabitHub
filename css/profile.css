@@ -1,0 +1,463 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: #f7f4ef;
+}
+
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 25px 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    z-index: 10;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar ul li {
+    display: flex;
+    align-items: center;
+}
+
+.btn-nav {
+    padding: 8px 14px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 13px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    transition: 0.3s;
+}
+
+.btn-nav:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================
+   Profile Section
+========================= */
+
+.profile-section {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 130px 20px 60px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url('https://images.unsplash.com/photo-1490645935967-10de6ba17061')
+        no-repeat center/cover;
+}
+
+
+/* =========================
+   Profile Container
+========================= */
+
+.profile-container {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 45px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border-radius: 12px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Profile Icon */
+
+.profile-icon {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #c8a97e;
+
+    border-radius: 50%;
+
+    font-size: 38px;
+}
+
+
+/* Heading */
+
+.profile-container h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 34px;
+
+    margin-bottom: 8px;
+
+    color: #3e2c23;
+}
+
+.welcome-text {
+    color: #777;
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   Profile Details
+========================= */
+
+.profile-details {
+    text-align: left;
+
+    margin-bottom: 30px;
+}
+
+.detail {
+    padding: 15px 5px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.detail span {
+    display: block;
+
+    font-size: 12px;
+
+    color: #888;
+
+    margin-bottom: 4px;
+}
+
+.detail strong {
+    font-size: 16px;
+
+    color: #3e2c23;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   Logout Button
+========================= */
+
+.logout-btn {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #c8a97e;
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #a8895f;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .profile-container {
+        padding: 30px 20px;
+    }
+
+    .profile-container h1 {
+        font-size: 28px;
+    }
+
+    .navbar ul {
+        gap: 8px;
+    }
+
+    .btn-nav {
+        font-size: 11px;
+        padding: 6px 9px;
+    }
+}
+
+
+/* =========================
+   Edit Profile
+========================= */
+
+.edit-btn {
+    width: 100%;
+    padding: 12px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #c8a97e;
+    border-radius: 5px;
+
+    background: transparent;
+    color: #a8895f;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.edit-btn:hover {
+    background: #c8a97e;
+    color: white;
+}
+
+.edit-form {
+    display: none;
+
+    text-align: left;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    background: #f7f4ef;
+
+    border-radius: 8px;
+}
+
+.edit-form h2 {
+    font-family: 'Playfair Display', serif;
+
+    text-align: center;
+
+    color: #3e2c23;
+
+    margin-bottom: 20px;
+}
+
+.edit-form label {
+    display: block;
+
+    font-size: 13px;
+
+    margin-top: 12px;
+    margin-bottom: 5px;
+
+    color: #555;
+}
+
+.edit-form input,
+.edit-form select {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    font-family: 'Poppins', sans-serif;
+
+    outline: none;
+}
+
+.edit-form input:focus,
+.edit-form select:focus {
+    border-color: #c8a97e;
+}
+
+.save-btn,
+.cancel-btn {
+    width: 100%;
+
+    padding: 10px;
+
+    margin-top: 15px;
+
+    border-radius: 5px;
+
+    font-family: 'Poppins', sans-serif;
+
+    cursor: pointer;
+}
+
+.save-btn {
+    border: none;
+
+    background: #c8a97e;
+
+    color: white;
+}
+
+.save-btn:hover {
+    background: #a8895f;
+}
+
+.cancel-btn {
+    border: 1px solid #ccc;
+
+    background: white;
+
+    color: #555;
+}
+
+.profileMsg {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+/* =========================
+   Change Password
+========================= */
+
+.change-password-btn {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #c8a97e;
+    border-radius: 5px;
+    background: transparent;
+    color: #a8895f;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.change-password-btn:hover {
+    background: #c8a97e;
+    color: white;
+}
+
+
+/* Password Form */
+
+.password-form {
+    display: none;
+    text-align: left;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #f7f4ef;
+    border-radius: 8px;
+}
+
+.password-form h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    color: #3e2c23;
+    margin-bottom: 20px;
+}
+
+.password-form label {
+    display: block;
+    font-size: 13px;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.password-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+.password-form input:focus {
+    border-color: #c8a97e;
+}
+
+
+/* Password Message */
+
+#passwordMsg {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+
+

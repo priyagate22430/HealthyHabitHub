@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | HealthyHabitHub</title>
+
+    <link rel="stylesheet" href="../css/profile.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <div class="logo">HealthyHabitHub</div>
+
+        <ul>
+            <li><a href="index.html" class="btn-nav">Home</a></li>
+            <li><a href="recipe.html" class="btn-nav">Recipes</a></li>
+            <li><a href="bmi.html" class="btn-nav">BMI</a></li>
+            <li><a href="profile.html" class="btn-nav">👤 Profile</a></li>
+            <li><a href="healthy-junk.html" class="btn-nav">Healthy vs Junk</a></li>
+            <li><a href="about.html" class="btn-nav">About</a></li>
+            <li><a href="contact.html" class="btn-nav">Contact</a></li>
+        </ul>
+
+    </header>
+
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+
+        <div class="profile-container">
+
+            <div class="profile-icon">
+                👤
+            </div>
+
+            <h1>My Profile</h1>
+
+            <p class="welcome-text">
+                Welcome to your HealthyHabitHub profile 🌿
+            </p>
+
+
+            <!-- Profile Details -->
+            <div class="profile-details">
+
+                <div class="detail">
+                    <span>Name</span>
+                    <strong id="profileName">Loading...</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Email</span>
+                    <strong id="profileEmail">Loading...</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Age</span>
+                    <strong id="profileAge">Loading...</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Gender</span>
+                    <strong id="profileGender">Loading...</strong>
+                </div>
+
+            </div>
+
+
+            <!-- Edit Button -->
+            <button id="editBtn" class="edit-btn">
+                ✏️ Edit Profile
+            </button>
+
+
+            <!-- Edit Form -->
+            <div id="editForm" class="edit-form">
+
+                <h2>Edit Profile</h2>
+
+                <label for="editName">Name</label>
+                <input type="text" id="editName">
+
+                <label for="editEmail">Email</label>
+                <input type="email" id="editEmail">
+
+
+                <label for="editAge">Age</label>
+                <input type="number" id="editAge" min="1">
+
+
+                <label for="editGender">Gender</label>
+
+                <select id="editGender">
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+
+
+                <button id="saveBtn" class="save-btn">
+                    Save Changes
+                </button>
+
+
+                <button id="cancelBtn" class="cancel-btn">
+                    Cancel
+                </button>
+
+
+                <p id="profileMsg"></p>
+               
+
+            </div>
+
+             <!-- Change Password Button -->
+            <button id="changePasswordBtn" class="change-password-btn">
+                  🔐 Change Password
+            </button>
+
+
+             <!-- Change Password Form -->
+          <div id="passwordForm" class="password-form">
+
+               <h2>Change Password</h2>
+
+               <label for="currentPassword">Current Password</label>
+               <input
+                 type="password"
+                 id="currentPassword"
+                 placeholder="Enter current password"
+                >
+
+                <label for="newPassword">New Password</label>
+                  <input
+                    type="password"
+                    id="newPassword"
+                    placeholder="Enter new password"
+                  >
+
+                <label for="confirmPassword">Confirm New Password</label>
+                  <input
+                     type="password"
+                     id="confirmPassword"
+                     placeholder="Confirm new password"
+                   >
+
+                <button id="passwordSaveBtn" class="save-btn">
+                   Change Password
+                </button>
+
+                <button id="passwordCancelBtn" class="cancel-btn">
+                   Cancel
+                </button>
+
+                <p id="passwordMsg"></p>
+          </div>
+            
+
+            <!-- Logout -->
+            <button id="logoutBtn" class="logout-btn">
+                Logout
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="../js/profile.js"></script>
+
+</body>
+
+</html>
